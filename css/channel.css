@@ -1,0 +1,386 @@
+/* баннер канала */
+.channel-banner {
+    width: 100%;
+    height: 240px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+    background: var(--gradient);
+    box-shadow: var(--shadow);
+}
+
+/* лёгкий блик сверху-слева, чтобы фон не был плоским */
+.channel-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 25% 30%, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+}
+
+
+/* шапка: аватар + имя + кнопки */
+.channel-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.channel-avatar-big {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(15, 40, 114, 0.12);
+}
+
+.channel-avatar-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.channel-info-block {
+    flex: 1;
+    min-width: 240px;
+    padding-top: 6px;
+}
+
+.channel-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.channel-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.15;
+}
+
+.verified-icon {
+    color: var(--amethyst);
+    font-size: 20px;
+}
+
+.channel-meta {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.channel-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 640px;
+}
+
+.channel-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 6px;
+    flex-shrink: 0;
+}
+
+
+/* кнопка "Подписаться" */
+.btn-subscribe {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 22px;
+    border-radius: 30px;
+    border: none;
+    background: var(--gradient);
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(161, 103, 245, 0.25);
+    transition: transform 0.2s, opacity 0.2s, background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-subscribe:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+/* состояние после подписки */
+.btn-subscribe.subscribed {
+    background: #fff;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    box-shadow: none;
+}
+
+/* кнопка "Написать" */
+.btn-ghost-outline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-ghost-outline:hover {
+    background: var(--bg-hover);
+}
+
+/* квадратная кнопка с тремя точками */
+.btn-icon-square {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    font-size: 16px;
+}
+
+.btn-icon-square:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+
+/* табы Видео / Плейлисты / О канале / Сообщество */
+.channel-tabs {
+    display: flex;
+    gap: 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+    padding: 0 4px;
+    overflow-x: auto;
+}
+
+.channel-tab {
+    background: none;
+    border: none;
+    padding: 12px 0;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.channel-tab:hover {
+    color: var(--text-primary);
+}
+
+.channel-tab.active {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* подчёркивание под активным табом */
+.channel-tab.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--gradient);
+}
+
+
+/* панели табов — по умолчанию скрыты, показывается только .active */
+.tab-panel {
+    display: none;
+    margin-bottom: 40px;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+
+/* панель над сеткой: сортировка + переключатель вида */
+.videos-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.sort-chips {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 4px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 3px;
+    flex-shrink: 0;
+}
+
+.view-btn {
+    width: 36px;
+    height: 32px;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    font-size: 14px;
+}
+
+.view-btn:hover {
+    color: var(--text-primary);
+}
+
+.view-btn.active {
+    background: var(--gradient);
+    color: #fff;
+}
+
+
+/* режим списка — карточка в строку */
+.video-grid.list-view {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.video-grid.list-view .video-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    transition: background 0.2s;
+}
+
+.video-grid.list-view .video-card:hover {
+    background: var(--bg-hover);
+}
+
+.video-grid.list-view .video-thumb {
+    margin-bottom: 0;
+}
+
+.video-grid.list-view .video-title {
+    min-height: 0;
+}
+
+/* блок с названием и статистикой, чтобы в обоих режимах лежал одинаково */
+.video-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+/* заглушка "в разработке" */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state i {
+    font-size: 48px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+/* блоки на табе "О канале" */
+.about-block {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+}
+
+.about-block h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.about-block p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+
+/* адаптив */
+@media (max-width: 1024px) {
+    .channel-banner { height: 180px; }
+    .channel-avatar-big { width: 88px; height: 88px; font-size: 32px; }
+    .channel-name { font-size: 24px; }
+}
+
+@media (max-width: 768px) {
+    .channel-header { flex-direction: column; gap: 16px; }
+    .channel-actions { padding-top: 0; }
+    .video-grid.list-view .video-card {
+        grid-template-columns: 160px 1fr;
+    }
+}

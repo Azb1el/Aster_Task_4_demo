@@ -1,0 +1,75 @@
+/* общий класс для всех иконок */
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    vertical-align: -0.125em;
+}
+
+
+
+/* навигация в сайдбаре */
+.fa-home            { -webkit-mask-image: url(../assets/icons/house.svg);              mask-image: url(../assets/icons/house.svg); }
+.fa-tv              { -webkit-mask-image: url(../assets/icons/tv.svg);                 mask-image: url(../assets/icons/tv.svg); }
+.fa-history         { -webkit-mask-image: url(../assets/icons/clock-rotate-left.svg);  mask-image: url(../assets/icons/clock-rotate-left.svg); }
+.fa-list-ul         { -webkit-mask-image: url(../assets/icons/list-ul.svg);            mask-image: url(../assets/icons/list-ul.svg); }
+.fa-users           { -webkit-mask-image: url(../assets/icons/users.svg);              mask-image: url(../assets/icons/users.svg); }
+.fa-film            { -webkit-mask-image: url(../assets/icons/film.svg);               mask-image: url(../assets/icons/film.svg); }
+.fa-gamepad         { -webkit-mask-image: url(../assets/icons/gamepad.svg);            mask-image: url(../assets/icons/gamepad.svg); }
+.fa-cog             { -webkit-mask-image: url(../assets/icons/gear.svg);               mask-image: url(../assets/icons/gear.svg); }
+.fa-question-circle { -webkit-mask-image: url(../assets/icons/circle-question.svg);    mask-image: url(../assets/icons/circle-question.svg); }
+
+/* стрелки */
+.fa-chevron-up      { -webkit-mask-image: url(../assets/icons/chevron-up.svg);         mask-image: url(../assets/icons/chevron-up.svg); }
+.fa-chevron-down    { -webkit-mask-image: url(../assets/icons/chevron-down.svg);       mask-image: url(../assets/icons/chevron-down.svg); }
+
+/* шапка */
+.fa-bell            { -webkit-mask-image: url(../assets/icons/bell.svg);               mask-image: url(../assets/icons/bell.svg); }
+.fa-search          { -webkit-mask-image: url(../assets/icons/magnifying-glass.svg);   mask-image: url(../assets/icons/magnifying-glass.svg); }
+
+/* канал / страница автора */
+.fa-circle-check    { -webkit-mask-image: url(../assets/icons/circle-check.svg);       mask-image: url(../assets/icons/circle-check.svg); }
+.fa-pen             { -webkit-mask-image: url(../assets/icons/pen.svg);                mask-image: url(../assets/icons/pen.svg); }
+.fa-ellipsis-h      { -webkit-mask-image: url(../assets/icons/ellipsis.svg);           mask-image: url(../assets/icons/ellipsis.svg); }
+.fa-th-large        { -webkit-mask-image: url(../assets/icons/table-cells-large.svg);  mask-image: url(../assets/icons/table-cells-large.svg); }
+.fa-list            { -webkit-mask-image: url(../assets/icons/list.svg);               mask-image: url(../assets/icons/list.svg); }
+.fa-sliders-h       { -webkit-mask-image: url(../assets/icons/sliders.svg);            mask-image: url(../assets/icons/sliders.svg); }
+
+/* настройки */
+.fa-user-circle     { -webkit-mask-image: url(../assets/icons/circle-user.svg);        mask-image: url(../assets/icons/circle-user.svg); }
+.fa-play-circle     { -webkit-mask-image: url(../assets/icons/circle-play.svg);        mask-image: url(../assets/icons/circle-play.svg); }
+.fa-palette         { -webkit-mask-image: url(../assets/icons/palette.svg);            mask-image: url(../assets/icons/palette.svg); }
+.fa-shield-alt      { -webkit-mask-image: url(../assets/icons/shield-halved.svg);      mask-image: url(../assets/icons/shield-halved.svg); }
+.fa-image           { -webkit-mask-image: url(../assets/icons/image.svg);              mask-image: url(../assets/icons/image.svg); }
+.fa-key             { -webkit-mask-image: url(../assets/icons/key.svg);                mask-image: url(../assets/icons/key.svg); }
+.fa-undo            { -webkit-mask-image: url(../assets/icons/rotate-left.svg);        mask-image: url(../assets/icons/rotate-left.svg); }
+.fa-cloud           { -webkit-mask-image: url(../assets/icons/cloud.svg);              mask-image: url(../assets/icons/cloud.svg); }
+.fa-check           { -webkit-mask-image: url(../assets/icons/check.svg);              mask-image: url(../assets/icons/check.svg); }
+
+/* просмотр видео */
+.fa-play            { -webkit-mask-image: url(../assets/icons/play.svg);               mask-image: url(../assets/icons/play.svg); }
+.fa-thumbs-up       { -webkit-mask-image: url(../assets/icons/thumbs-up.svg);          mask-image: url(../assets/icons/thumbs-up.svg); }
+.fa-thumbs-down     { -webkit-mask-image: url(../assets/icons/thumbs-down.svg);        mask-image: url(../assets/icons/thumbs-down.svg); }
+.fa-share           { -webkit-mask-image: url(../assets/icons/share.svg);              mask-image: url(../assets/icons/share.svg); }
+
+.fa-xmark, .fa-times { -webkit-mask-image: url(../assets/icons/xmark.svg); mask-image: url(../assets/icons/xmark.svg); }
+.fa-sparkles { -webkit-mask-image: url(../assets/icons/sparkles.svg); mask-image: url(../assets/icons/sparkles.svg); }
+.fa-closed-captioning { -webkit-mask-image: url(../assets/icons/closed-captioning.svg); mask-image: url(../assets/icons/closed-captioning.svg); }
+.fa-arrow-up { -webkit-mask-image: url(../assets/icons/arrow-up.svg); mask-image: url(../assets/icons/arrow-up.svg); }
+.fa-plus { -webkit-mask-image: url(../assets/icons/plus.svg); mask-image: url(../assets/icons/plus.svg); }
+.fa-cloud-arrow-up { -webkit-mask-image: url(../assets/icons/cloud-arrow-up.svg); mask-image: url(../assets/icons/cloud-arrow-up.svg); }
+.fa-file-lines, .fa-file-text { -webkit-mask-image: url(../assets/icons/file-lines.svg); mask-image: url(../assets/icons/file-lines.svg); }
+.fa-file-pen { -webkit-mask-image: url(../assets/icons/file-pen.svg); mask-image: url(../assets/icons/file-pen.svg); }
+.fa-upload { -webkit-mask-image: url(../assets/icons/upload.svg); mask-image: url(../assets/icons/upload.svg); }
+.fa-scissors { -webkit-mask-image: url(../assets/icons/scissors.svg); mask-image: url(../assets/icons/scissors.svg); }

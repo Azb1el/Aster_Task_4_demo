@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aster — Просмотр видео</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/aster.css">    <link rel="stylesheet" href="css/watch.css">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header class="site-header">
+    <!-- Левая часть -->
+    <div class="header-left">
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="aster.html" class="logo">
+            <img src="assets/aster-logo.png" alt="Aster" class="logo-img">
+            <span class="logo-text">ASTER</span>
+        </a>
+    </div>
+
+    <!-- Поиск -->
+    <div class="search-box">
+        <input type="text" placeholder="Поиск видео" id="searchInput" autocomplete="off">
+        <button class="search-btn" id="searchBtn" aria-label="Найти">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <!-- Правая часть -->
+    <div class="header-right">
+        <button class="icon-btn" aria-label="Уведомления">
+            <i class="fas fa-bell"></i>
+        </button>
+
+        <div class="avatar-wrapper" id="avatarWrapper">
+            <div class="avatar" id="avatarBtn">A</div>
+            <button class="avatar-arrow" aria-label="Открыть меню">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- КОНТЕНТ -->
+<div class="watch-container">
+
+    <main>
+        <!-- Плеер -->
+        <div class="video-wrapper">
+            <video id="mainVideo" controls autoplay playsinline>
+                <source src="test.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <h1 class="video-title" id="videoTitle">Загрузка...</h1>
+
+        <!-- Метаданные -->
+        <div class="video-meta">
+            <div class="channel-info">
+                <div class="channel-avatar">A</div>
+                <div>
+                    <div class="channel-name">Канал Aster</div>
+                    <div class="channel-subs">1,2 тыс. подписчиков</div>
+                </div>
+                <button class="btn subscribe-btn">Подписаться</button>
+            </div>
+
+            <div class="video-actions">
+                <button class="btn-ghost"><i class="fas fa-thumbs-up"></i> 24</button>
+                <button class="btn-ghost"><i class="fas fa-thumbs-down"></i></button>
+                <button class="btn-ghost"><i class="fas fa-share"></i> Поделиться</button>
+            </div>
+        </div>
+
+        <!-- Описание -->
+        <div class="description">
+            <strong>1,2 тыс. просмотров · 2 дня назад</strong>
+            <p style="margin-top: 8px;" id="videoDescription">
+                Демонстрационное видео платформы Aster.
+            </p>
+        </div>
+
+        <!-- Комментарии -->
+        <section class="comments-section">
+            <h3>Комментарии · 3</h3>
+
+            <div class="comment-form">
+                <input type="text" placeholder="Написать комментарий...">
+                <button class="btn">Отправить</button>
+            </div>
+
+            <div class="comment">
+                <div class="comment-avatar">М</div>
+                <div>
+                    <div class="comment-author">Мария Лебедева</div>
+                    <div class="comment-text">Комментарий очень хвалебный</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-avatar">Д</div>
+                <div>
+                    <div class="comment-author">Дмитрий Орлов</div>
+                    <div class="comment-text">Отличное видео! Смотрю уже второй раз.</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-avatar">Е</div>
+                <div>
+                    <div class="comment-author">Елена Ким</div>
+                    <div class="comment-text">Спасибо за подробное объяснение.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Рекомендации -->
+    <aside class="recommendations">
+        <h3>Рекомендации</h3>
+
+        <a href="watch.html" class="rec-item">
+            <div class="rec-thumb"><i class="fas fa-play"></i></div>
+            <div class="rec-info">
+                <div class="rec-title">Тестовое видео Aster</div>
+                <div class="rec-channel">Канал Aster</div>
+                <div class="rec-views">1,2 тыс. просмотров</div>
+            </div>
+        </a>
+
+        <a href="watch.html" class="rec-item">
+            <div class="rec-thumb"><i class="fas fa-play"></i></div>
+            <div class="rec-info">
+                <div class="rec-title">Демо-ролик Aster</div>
+                <div class="rec-channel">Aster Studio</div>
+                <div class="rec-views">890 просмотров</div>
+            </div>
+        </a>
+
+        <a href="watch.html" class="rec-item">
+            <div class="rec-thumb"><i class="fas fa-play"></i></div>
+            <div class="rec-info">
+                <div class="rec-title">Как работает распознавание речи</div>
+                <div class="rec-channel">Aster Studio</div>
+                <div class="rec-views">48 тыс. просмотров</div>
+            </div>
+        </a>
+
+        <a href="watch.html" class="rec-item">
+            <div class="rec-thumb"><i class="fas fa-play"></i></div>
+            <div class="rec-info">
+                <div class="rec-title">Монтаж подкаста за один вечер</div>
+                <div class="rec-channel">Звук и смысл</div>
+                <div class="rec-views">21 тыс. просмотров</div>
+            </div>
+        </a>
+    </aside>
+
+</div>
+
+<!-- СКРИПТЫ -->
+<script src="js/demo-data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/watch.js"></script>
+
+</body>
+</html>

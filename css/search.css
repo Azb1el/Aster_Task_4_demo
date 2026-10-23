@@ -1,0 +1,286 @@
+/* Страница поиска */
+.search-page {
+    padding: 24px 32px 28px;
+}
+
+.search-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+/* Строка поиска с запросом */
+.search-header-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-query-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 44px;
+    padding: 0 18px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    min-width: 260px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+    .search-query-box i {
+        color: var(--text-secondary);
+        font-size: 14px;
+    }
+
+.search-clear {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 4px;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+    .search-clear:hover {
+        color: var(--text-primary);
+    }
+
+.smart-search-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 14px;
+    background: rgba(161, 103, 245, 0.1);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--amethyst);
+}
+
+.search-stats {
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search-stats-dot {
+    color: var(--text-muted);
+}
+
+.search-stats-accent {
+    font-weight: 600;
+    color: var(--amethyst);
+}
+
+/* Табы + сортировка */
+.search-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-tabs {
+    display: flex;
+    gap: 6px;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    overflow-x: auto;
+}
+
+.search-tab {
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+    .search-tab:hover {
+        color: var(--text-primary);
+    }
+
+    .search-tab.active {
+        background: var(--gradient);
+        color: #fff;
+        font-weight: 600;
+    }
+
+.search-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 16px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+    .search-sort:hover {
+        background: var(--bg-hover);
+        color: var(--text-primary);
+    }
+
+/* Карточка "Совпадение в субтитрах" */
+.subtitle-match-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid rgba(161, 103, 245, 0.2);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(161, 103, 245, 0.1);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.subtitle-match-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(161, 103, 245, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--amethyst);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.subtitle-match-body {
+    flex: 1;
+    min-width: 240px;
+}
+
+.subtitle-match-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.subtitle-match-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--amethyst);
+    background: rgba(161, 103, 245, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.subtitle-match-time {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.subtitle-match-quote {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.subtitle-match-source {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.btn-match-jump {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 30px;
+    border: none;
+    background: var(--gradient);
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(161, 103, 245, 0.25);
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+    .btn-match-jump:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 24px rgba(161, 103, 245, 0.35);
+    }
+
+/* Спиннер */
+.search-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(161, 103, 245, 0.2);
+    border-top-color: var(--amethyst);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .search-page {
+        padding: 16px 16px 24px;
+    }
+
+    .search-title {
+        font-size: 24px;
+    }
+
+    .search-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+}

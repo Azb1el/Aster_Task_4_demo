@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия — Aster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/aster.css">
+    <link rel="stylesheet" href="css/studio.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="site-header">
+        <div class="header-left">
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="aster.html" class="logo">
+                <img src="assets/aster-logo.png" alt="Aster" class="logo-img">
+                <span class="logo-text">ASTER</span>
+            </a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск видео" id="searchInput" autocomplete="off">
+            <button class="search-btn" id="searchBtn" aria-label="Найти">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Уведомления"><i class="fas fa-bell"></i></button>
+            <div class="avatar-wrapper" id="avatarWrapper">
+                <div class="avatar" id="avatarBtn">A</div>
+                <button class="avatar-arrow" aria-label="Открыть меню"><i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="aster-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="aster.html" class="nav-item"><i class="fas fa-home"></i><span>Главная</span></a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <div class="user-card" id="sidebarUserCard">
+                <div class="user-avatar" id="sidebarUserAvatar">—</div>
+                <div class="user-info">
+                    <div class="user-name" id="sidebarUserName">Пользователь</div>
+                    <div class="user-email" id="sidebarUserEmail">—</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="channel.html" class="nav-item"><i class="fas fa-tv"></i><span>Мой канал</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-history"></i><span>История</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-list-ul"></i><span>Плейлисты</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-users"></i><span>Подписки</span></a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <button class="nav-item expand-btn" type="button">
+                <i class="fas fa-chevron-up"></i><span>Развернуть</span>
+            </button>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item"><i class="fas fa-film"></i><span>Фильмы</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-gamepad"></i><span>Игры</span></a>
+            </nav>
+            <div class="sidebar-spacer"></div>
+            <div class="sidebar-divider"></div>
+            <nav class="sidebar-nav">
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Настройки</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-question-circle"></i><span>Помощь</span></a>
+            </nav>
+            <div class="copyright">© 2025 Aster</div>
+        </aside>
+
+        <main class="main-content studio-page">
+
+            <!-- Заголовок -->
+            <div class="studio-header">
+                <div>
+                    <h1 class="studio-title">Студия</h1>
+                    <p class="studio-subtitle">Аналитика канала, загрузка видео и управление контентом.</p>
+                </div>
+                <div class="studio-header-actions">
+                    <button class="btn-create-video" id="createVideoBtn" type="button">
+                        <i class="fas fa-plus"></i>
+                        <span>Создать видео</span>
+                    </button>
+                    <button class="btn-icon-square" type="button" aria-label="Настройки студии">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Табы -->
+            <div class="studio-tabs">
+                <button class="studio-tab active" data-tab="dashboard" type="button">Дашборд</button>
+                <button class="studio-tab" data-tab="upload" type="button">Загрузка</button>
+                <button class="studio-tab" data-tab="editor" type="button">Редактор</button>
+                <button class="studio-tab" data-tab="audience" type="button">Аудитория</button>
+            </div>
+
+            <!-- Дашборд -->
+            <section class="studio-panel active" data-panel="dashboard">
+
+                <!-- 3 карточки метрик -->
+                <div class="metrics-row">
+                    <div class="metric-card">
+                        <div class="metric-label">Просмотры за 30 дней</div>
+                        <div class="metric-value">1,24 млн</div>
+                        <div class="metric-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+12,4 % к прошлому месяцу</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Новые подписчики</div>
+                        <div class="metric-value">128 342</div>
+                        <div class="metric-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+842 за месяц</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Среднее удержание</div>
+                        <div class="metric-value">62 %</div>
+                        <div class="metric-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+3,1 п.п. за месяц</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- График (заглушка) -->
+                <div class="studio-card chart-card">
+                    <div class="studio-card-header">
+                        <h2>Просмотры за 30 дней</h2>
+                        <div class="chart-tabs">
+                            <button class="chart-tab" type="button">7 дней</button>
+                            <button class="chart-tab active" type="button">30 дней</button>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder">
+                        <svg viewBox="0 0 680 150" preserveAspectRatio="none" class="chart-svg">
+                            <defs>
+                                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#a167f5" stop-opacity="0.3" />
+                                    <stop offset="100%" stop-color="#a167f5" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M0,120 L100,90 L200,100 L300,60 L400,70 L500,40 L600,55 L680,30 L680,150 L0,150 Z" fill="url(#chartGrad)" />
+                            <path d="M0,120 L100,90 L200,100 L300,60 L400,70 L500,40 L600,55 L680,30" fill="none" stroke="#a167f5" stroke-width="2" />
+                        </svg>
+                        <div class="chart-dates">
+                            <span>1 июн</span><span>6 июн</span><span>11 июн</span>
+                            <span>16 июн</span><span>21 июн</span><span>26 июн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Топ видео -->
+                <div class="studio-card top-videos-card">
+                    <div class="studio-card-header">
+                        <h2>Топ видео по просмотрам</h2>
+                        <a href="#" class="link-all">Все</a>
+                    </div>
+                    <div class="top-videos-list">
+                        <div class="top-video-item">
+                            <div class="top-video-info">
+                                <div class="top-video-title">Дизайн-система Aster</div>
+                                <div class="top-video-count">342 тыс.</div>
+                            </div>
+                            <div class="progress-bar"><span style="width:100%"></span></div>
+                        </div>
+                        <div class="top-video-item">
+                            <div class="top-video-info">
+                                <div class="top-video-title">Тёмная тема: палитра без грязи</div>
+                                <div class="top-video-count">210 тыс.</div>
+                            </div>
+                            <div class="progress-bar"><span style="width:70%"></span></div>
+                        </div>
+                        <div class="top-video-item">
+                            <div class="top-video-info">
+                                <div class="top-video-title">Мой процесс: от скетча до прототипа</div>
+                                <div class="top-video-count">156 тыс.</div>
+                            </div>
+                            <div class="progress-bar"><span style="width:52%"></span></div>
+                        </div>
+                        <div class="top-video-item">
+                            <div class="top-video-info">
+                                <div class="top-video-title">Субтитры как интерфейс</div>
+                                <div class="top-video-count">128 тыс.</div>
+                            </div>
+                            <div class="progress-bar"><span style="width:42%"></span></div>
+                        </div>
+                        <div class="top-video-item">
+                            <div class="top-video-info">
+                                <div class="top-video-title">Ответы на вопросы: дизайн и видео</div>
+                                <div class="top-video-count">88 тыс.</div>
+                            </div>
+                            <div class="progress-bar"><span style="width:30%"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Видео канала — таблица -->
+                <div class="studio-card videos-table-card">
+                    <div class="studio-card-header">
+                        <h2>Видео канала</h2>
+                        <a href="#" class="link-all">Все 342 видео</a>
+                    </div>
+                    <div class="videos-table">
+                        <div class="videos-table-head">
+                            <div>Видео</div>
+                            <div>Приватность</div>
+                            <div>Просмотры</div>
+                            <div>CTR</div>
+                            <div>Дата</div>
+                        </div>
+                        <div class="videos-table-row">
+                            <div class="vt-title">
+                                <div class="vt-thumb"></div>
+                                <span>Дизайн-система Aster: как мы собираем компоненты</span>
+                            </div>
+                            <div><span class="vt-badge public">Публичное</span></div>
+                            <div>342 тыс.</div>
+                            <div>8,4 %</div>
+                            <div>12 июня</div>
+                        </div>
+                        <div class="videos-table-row">
+                            <div class="vt-title">
+                                <div class="vt-thumb"></div>
+                                <span>Стрим: рефакторим макет плеера вживую</span>
+                            </div>
+                            <div><span class="vt-badge public">Публичное</span></div>
+                            <div>96 тыс.</div>
+                            <div>6,1 %</div>
+                            <div>28 мая</div>
+                        </div>
+                        <div class="videos-table-row">
+                            <div class="vt-title">
+                                <div class="vt-thumb"></div>
+                                <span>Субтитры как интерфейс: семь рабочих паттернов</span>
+                            </div>
+                            <div><span class="vt-badge link">По ссылке</span></div>
+                            <div>128 тыс.</div>
+                            <div>7,2 %</div>
+                            <div>21 мая</div>
+                        </div>
+                        <div class="videos-table-row">
+                            <div class="vt-title">
+                                <div class="vt-thumb"></div>
+                                <span>Черновик: обзор новых инструментов монтажа</span>
+                            </div>
+                            <div><span class="vt-badge draft">Черновик</span></div>
+                            <div>—</div>
+                            <div>—</div>
+                            <div>3 июня</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Загрузка -->
+            <section class="studio-panel" data-panel="upload">
+                <div class="upload-layout">
+                    <div class="studio-card upload-main">
+                        <div class="studio-card-header">
+                            <h2>Загрузить видео</h2>
+                            <span class="autosubs-badge">
+                                <i class="fas fa-sparkles"></i>
+                                Автосубтитры включены
+                            </span>
+                        </div>
+                        <div class="dropzone" id="dropzone">
+                            <i class="fas fa-cloud-arrow-up"></i>
+                            <p>Перетащите файл сюда или выберите на устройстве</p>
+                            <p class="dropzone-hint">MP4, MOV, MKV · до 4 ГБ · до 4K HDR</p>
+                            <button class="btn-choose-file" type="button">Выбрать файл</button>
+                        </div>
+                        <div class="upload-field">
+                            <label>Название</label>
+                            <input type="text" class="input" value="Дизайн-система Aster: как мы собираем компоненты">
+                        </div>
+                        <div class="upload-field">
+                            <label>Описание</label>
+                            <textarea class="input" rows="3">Разбираем, как устроена библиотека компонентов Aster, зачем нужны токены и как мы поддерживаем 340 видео в одном стиле.</textarea>
+                        </div>
+                        <div class="upload-field">
+                            <label>Теги</label>
+                            <div class="tags-row">
+                                <span class="tag">#дизайн</span>
+                                <span class="tag">#система</span>
+                                <span class="tag">#субтитры</span>
+                                <button class="tag-add" type="button">+ Добавить тег</button>
+                            </div>
+                        </div>
+                        <div class="upload-row">
+                            <div class="upload-field">
+                                <label>Приватность</label>
+                                <select class="select">
+                                    <option>Публичное</option>
+                                    <option>По ссылке</option>
+                                    <option>Приватное</option>
+                                </select>
+                            </div>
+                            <div class="upload-field">
+                                <label>Категория</label>
+                                <select class="select">
+                                    <option>Обучение</option>
+                                    <option>Музыка</option>
+                                    <option>Игры</option>
+                                    <option>Кино</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="upload-actions">
+                            <button class="btn-publish" id="publishBtn" type="button">
+                                <i class="fas fa-upload"></i>
+                                <span>Опубликовать</span>
+                            </button>
+                            <button class="btn-draft" id="draftBtn" type="button">
+                                <i class="fas fa-file-pen"></i>
+                                <span>Сохранить черновик</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="studio-card editor-preview">
+                        <div class="studio-card-header">
+                            <h2>Редактор видео</h2>
+                            <span class="saved-badge"><i class="fas fa-check"></i> Сохранено</span>
+                        </div>
+                        <div class="editor-thumb">
+                            <i class="fas fa-play"></i>
+                            <button class="btn-change-cover" type="button">
+                                <i class="fas fa-image"></i> Изменить обложку
+                            </button>
+                        </div>
+                        <div class="subtitle-item">
+                            <i class="fas fa-file-text"></i>
+                            <span>ru.srt</span>
+                            <span class="subtitle-status ready">Готово</span>
+                        </div>
+                        <div class="subtitle-item">
+                            <i class="fas fa-file-text"></i>
+                            <span>en.vtt</span>
+                            <span class="subtitle-status processing">Обработка</span>
+                        </div>
+                        <div class="editor-toggle-row">
+                            <span>Предмодерация</span>
+                            <label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                        </div>
+                        <div class="editor-toggle-row">
+                            <span>Фильтр ссылок и спама</span>
+                            <label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Редактор -->
+            <section class="studio-panel" data-panel="editor">
+                <div class="studio-card">
+                    <div class="empty-state">
+                        <i class="fas fa-scissors"></i>
+                        <h3>Редактор в разработке</h3>
+                        <p>Здесь будет монтаж, обрезка и работа с субтитрами.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Аудитория -->
+            <section class="studio-panel" data-panel="audience">
+                <div class="studio-card">
+                    <div class="empty-state">
+                        <i class="fas fa-users"></i>
+                        <h3>Аудитория в разработке</h3>
+                        <p>Здесь будет география, возраст и интересы зрителей.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/demo-data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/studio.js"></script>
+</body>
+</html>

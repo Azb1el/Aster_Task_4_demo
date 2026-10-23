@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Канал — Aster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/aster.css">
+    <link rel="stylesheet" href="css/channel.css">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header class="site-header">
+    <div class="header-left">
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="aster.html" class="logo">
+            <img src="assets/aster-logo.png" alt="Aster" class="logo-img">
+            <span class="logo-text">ASTER</span>
+        </a>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Поиск видео" autocomplete="off" disabled>
+        <button class="search-btn" aria-label="Найти" disabled>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <div class="header-right">
+        <button class="icon-btn" aria-label="Уведомления">
+            <i class="fas fa-bell"></i>
+        </button>
+        <div class="avatar-wrapper" id="avatarWrapper">
+            <div class="avatar" id="avatarBtn">A</div>
+            <button class="avatar-arrow" aria-label="Открыть меню">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- LAYOUT -->
+<div class="aster-layout">
+
+    <!-- САЙДБАР -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="aster.html" class="nav-item">
+                <i class="fas fa-home"></i><span>Главная</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="user-card" id="sidebarUserCard">
+            <div class="user-avatar" id="sidebarUserAvatar">—</div>
+            <div class="user-info">
+                <div class="user-name" id="sidebarUserName">Пользователь</div>
+                <div class="user-email" id="sidebarUserEmail">—</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="channel.html" class="nav-item active"><i class="fas fa-tv"></i><span>Мой канал</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-history"></i><span>История</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-list-ul"></i><span>Плейлисты</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-users"></i><span>Подписки</span></a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <button class="nav-item expand-btn" type="button">
+            <i class="fas fa-chevron-up"></i><span>Развернуть</span>
+        </button>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item"><i class="fas fa-film"></i><span>Фильмы</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-gamepad"></i><span>Игры</span></a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-divider"></div>
+
+        <nav class="sidebar-nav">
+            <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Настройки</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-question-circle"></i><span>Помощь</span></a>
+        </nav>
+
+        <div class="copyright">© 2025 Aster</div>
+    </aside>
+
+    <!-- КОНТЕНТ -->
+    <main class="main-content">
+
+        <!-- БАННЕР -->
+        <div class="channel-banner" id="channelBanner"></div>
+
+        <!-- ШАПКА КАНАЛА -->
+        <div class="channel-header">
+            <div class="channel-avatar-big" id="channelAvatar">A</div>
+
+            <div class="channel-info-block">
+                <div class="channel-name-row">
+                    <h1 class="channel-name" id="channelName">Канал</h1>
+                    <i class="fas fa-circle-check verified-icon" title="Подтверждённый канал"></i>
+                </div>
+                <div class="channel-meta" id="channelMeta">@user · 999 млн подписчиков · 999 млн просмотров</div>
+                <div class="channel-description" id="channelDescription">просто тест</div>
+            </div>
+
+            <div class="channel-actions">
+                <button class="btn-subscribe" id="subscribeBtn" type="button">
+                    <i class="fas fa-bell"></i>
+                    <span>Подписаться</span>
+                </button>
+                <button class="btn-ghost-outline" id="writeBtn" type="button">
+                    <i class="fas fa-pen"></i>
+                    <span>Написать</span>
+                </button>
+                <a href="studio.html" class="btn-ghost-outline" style="text-decoration:none;">
+                    <i class="fas fa-cog"></i>
+                    <span>Студия</span>
+                </a>
+                <button class="btn-icon-square" id="moreBtn" type="button" aria-label="Ещё">
+                    <i class="fas fa-ellipsis-h"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- ТАБЫ -->
+        <div class="channel-tabs">
+            <button class="channel-tab active" data-tab="videos">Видео · 999 млн</button>
+            <button class="channel-tab" data-tab="playlists">Плейлисты · 12</button>
+            <button class="channel-tab" data-tab="about">О канале</button>
+            <button class="channel-tab" data-tab="community">Сообщество</button>
+        </div>
+
+        <!-- ВИДЕО -->
+        <section class="tab-panel active" id="tab-videos">
+            <div class="videos-toolbar">
+                <div class="sort-chips">
+                    <button class="chip active" type="button">Новые</button>
+                    <button class="chip" type="button">Популярные</button>
+                    <button class="chip" type="button">Длинные</button>
+                </div>
+                <div class="view-toggle" id="viewToggle">
+                    <button class="view-btn active" data-view="grid" type="button" title="Плитка">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" type="button" title="Список">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="video-grid" id="channelVideoGrid"></div>
+        </section>
+
+        <!-- ПЛЕЙЛИСТЫ -->
+        <section class="tab-panel" id="tab-playlists">
+            <div class="empty-state">
+                <i class="fas fa-list-ul"></i>
+                <h3>Плейлисты появятся позже</h3>
+            </div>
+        </section>
+
+        <!-- О КАНАЛЕ -->
+        <section class="tab-panel" id="tab-about">
+            <div class="about-block">
+                <h3>Описание</h3>
+                <p>тест</p>
+            </div>
+            <div class="about-block">
+                <h3>Статистика</h3>
+                <p>999 млн подписчиков · 999 млн просмотров · 999 млн видео</p>
+            </div>
+            <div class="about-block">
+                <h3>Дата регистрации</h3>
+                <p>3 октября 2026 г.</p>
+            </div>
+        </section>
+
+        <!-- СООБЩЕСТВО -->
+        <section class="tab-panel" id="tab-community">
+            <div class="empty-state">
+                <i class="fas fa-users"></i>
+                <h3>Сообщество в разработке</h3>
+            </div>
+        </section>
+
+    </main>
+</div>
+<script src="js/demo-data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/channel.js"></script>
+</body>
+</html>

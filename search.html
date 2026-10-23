@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск — Aster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/aster.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="site-header">
+        <div class="header-left">
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="aster.html" class="logo">
+                <img src="assets/aster-logo.png" alt="Aster" class="logo-img">
+                <span class="logo-text">ASTER</span>
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Поиск видео" id="searchInput" autocomplete="off">
+            <button class="search-btn" id="searchBtn" aria-label="Найти">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Уведомления">
+                <i class="fas fa-bell"></i>
+            </button>
+            <div class="avatar-wrapper" id="avatarWrapper">
+                <div class="avatar" id="avatarBtn">A</div>
+                <button class="avatar-arrow" aria-label="Открыть меню">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- LAYOUT -->
+    <div class="aster-layout">
+
+        <!-- САЙДБАР -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="aster.html" class="nav-item">
+                    <i class="fas fa-home"></i><span>Главная</span>
+                </a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <div class="user-card" id="sidebarUserCard">
+                <div class="user-avatar" id="sidebarUserAvatar">—</div>
+                <div class="user-info">
+                    <div class="user-name" id="sidebarUserName">Пользователь</div>
+                    <div class="user-email" id="sidebarUserEmail">—</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="channel.html" class="nav-item"><i class="fas fa-tv"></i><span>Мой канал</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-history"></i><span>История</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-list-ul"></i><span>Плейлисты</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-users"></i><span>Подписки</span></a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <button class="nav-item expand-btn" type="button">
+                <i class="fas fa-chevron-up"></i><span>Развернуть</span>
+            </button>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item"><i class="fas fa-film"></i><span>Фильмы</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-gamepad"></i><span>Игры</span></a>
+            </nav>
+            <div class="sidebar-spacer"></div>
+            <div class="sidebar-divider"></div>
+            <nav class="sidebar-nav">
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i><span>Настройки</span></a>
+                <a href="#" class="nav-item"><i class="fas fa-question-circle"></i><span>Помощь</span></a>
+            </nav>
+            <div class="copyright">© 2025 Aster</div>
+        </aside>
+
+        <!-- КОНТЕНТ -->
+        <main class="main-content search-page">
+
+            <h1 class="search-title">Результаты поиска</h1>
+
+            <!-- Поисковая строка с запросом -->
+            <div class="search-header-row">
+                <div class="search-query-box">
+                    <i class="fas fa-search"></i>
+                    <span id="searchQuery">дизайн интерфейс</span>
+                    <button class="search-clear" id="searchClear" type="button" aria-label="Очистить">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="smart-search-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Умный поиск по субтитрам</span>
+                </div>
+                <div class="search-stats">
+                    <span id="searchStats">Найдено 1 248 видео</span>
+                    <span class="search-stats-dot">·</span>
+                    <span class="search-stats-accent">32 совпадения в субтитрах</span>
+                </div>
+            </div>
+
+            <!-- Табы + сортировка -->
+            <div class="search-toolbar">
+                <div class="search-tabs">
+                    <button class="search-tab active" data-tab="all" type="button">Все результаты</button>
+                    <button class="search-tab" data-tab="videos" type="button">Видео</button>
+                    <button class="search-tab" data-tab="channels" type="button">Каналы</button>
+                    <button class="search-tab" data-tab="playlists" type="button">Плейлисты</button>
+                    <button class="search-tab" data-tab="live" type="button">Прямые эфиры</button>
+                </div>
+                <button class="search-sort" type="button" id="searchSort">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Сортировка: по релевантности</span>
+                </button>
+            </div>
+
+            <!-- Карточка "Совпадение в субтитрах" -->
+            <div class="subtitle-match-card">
+                <div class="subtitle-match-icon">
+                    <i class="fas fa-closed-captioning"></i>
+                </div>
+                <div class="subtitle-match-body">
+                    <div class="subtitle-match-meta">
+                        <span class="subtitle-match-label">Совпадение в субтитрах</span>
+                        <span class="subtitle-match-time">04:12</span>
+                    </div>
+                    <p class="subtitle-match-quote">«…Это видео онастроке текста в студии и в настройках…»</p>
+                    <p class="subtitle-match-source">Текст текст тектс · Aster Studio · 1,2 млн просмотров</p>
+                </div>
+                <button class="btn-match-jump" id="matchJump" type="button">
+                    <i class="fas fa-play"></i>
+                    <span>Перейти к моменту</span>
+                </button>
+            </div>
+
+            <!-- Сетка результатов -->
+            <div class="video-grid" id="searchResults"></div>
+
+            <!-- Спиннер -->
+            <div class="search-loading">
+                <div class="spinner"></div>
+                <span>Загружаем ещё видео…</span>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/demo-data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
